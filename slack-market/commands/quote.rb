@@ -22,12 +22,12 @@ module SlackMarket
           logger.info "#{client.owner}, user=#{data.user} - #{quote.name} (#{quote.symbol}): $#{quote.last_trade_price}"
           attachment = {
             fallback: "#{quote.name} (#{quote.symbol}): $#{quote.last_trade_price}",
-            title_link: "http://finance.yahoo.com/q?s=#{quote.symbol}",
+            title_link: "http://br.financas.yahoo.com/q?s=#{quote.symbol}",
             title: "#{quote.name} (#{quote.symbol})",
             text: "$#{quote.last_trade_price} (#{quote.change_in_percent})",
             color: quote.change.to_f > 0 ? '#00FF00' : '#FF0000'
           }
-          attachment[:image_url] = "http://chart.finance.yahoo.com/z?s=#{quote.symbol}&z=l" if client.owner.charts?
+          attachment[:image_url] = "http://br.financas.yahoo.com/z?s=#{quote.symbol}&z=l" if client.owner.charts?
           message[:attachments] << attachment
         end
 
