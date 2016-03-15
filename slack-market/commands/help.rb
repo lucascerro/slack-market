@@ -9,7 +9,7 @@ Try "What is the price of MSFT?" or "Tell me about YHOO, AAPL and $I, please."
 General
 -------
 
-help                - get this helpful message
+help                - get this helpful message :)
 
 Settings
 --------
